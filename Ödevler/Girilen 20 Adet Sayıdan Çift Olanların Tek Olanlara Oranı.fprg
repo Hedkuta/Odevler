@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-04 10:46:13 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDQ7MTA6Mjc6NDUgw5ZTOzI5MDc="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDQ7MTA6NDY6MTMgw5ZTOzE7MzAxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#231;iftsayi, teksayi, i, sayi" type="Real" array="False" size=""/>
+            <declare name="oran" type="Real" array="False" size=""/>
+            <assign variable="&#231;iftsayi" expression="0"/>
+            <assign variable="teksayi" expression="0"/>
+            <for variable="i" start="1" end="20" direction="inc" step="1">
+                <output expression="i &amp; &quot;.Say&#305;y&#305; Giriniz.&quot;" newline="True"/>
+                <input variable="sayi"/>
+                <if expression="sayi % 2 == 0">
+                    <then>
+                        <assign variable="&#231;iftsayi" expression="&#231;iftsayi + sayi"/>
+                    </then>
+                    <else>
+                        <assign variable="teksayi" expression="teksayi + sayi"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Girdi&#287;iniz Tek Sayilarin Toplam&#305;: &quot; &amp; teksayi" newline="True"/>
+            <output expression="&quot;Girdi&#287;iniz &#199;ift Sayilarin Toplam&#305;: &quot; &amp; &#231;iftsayi" newline="True"/>
+            <assign variable="oran" expression="&#231;iftsayi / teksayi"/>
+            <output expression="&quot;Girdi&#287;iniz &#199;ift Sayilar&#305;n Tek Say&#305;lara Oran&#305;: &quot; &amp; oran" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

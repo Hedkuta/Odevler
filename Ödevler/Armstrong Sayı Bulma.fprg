@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-05 11:53:47 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDU7MTE6NDg6MTcgw5ZTOzI5MTE="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDU7MTE6NTM6NDcgw5ZTOzE7MzAxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, toplam, gecici, basamak, rakam" type="Integer" array="False" size=""/>
+            <assign variable="basamak" expression="0"/>
+            <assign variable="toplam" expression="0"/>
+            <output expression="&quot;L&#252;tfen Bir Say&#305; Giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <assign variable="gecici" expression="sayi"/>
+            <while expression="gecici &gt; 0">
+                <assign variable="gecici" expression="gecici / 10"/>
+                <assign variable="basamak" expression="basamak + 1"/>
+            </while>
+            <assign variable="gecici" expression="sayi"/>
+            <while expression="gecici &gt; 0">
+                <assign variable="rakam" expression="gecici % 10"/>
+                <assign variable="gecici" expression="gecici / 10"/>
+                <assign variable="toplam" expression="toplam + ( rakam ^ basamak )"/>
+            </while>
+            <if expression="sayi == toplam">
+                <then>
+                    <output expression="&quot;Girdi&#287;iniz Say&#305; Bir Armstrong Say&#305;.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Girdi&#287;iniz Say&#305; Bir Armstrong Say&#305; De&#287;il.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-05 11:18:14 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDU7MTE6MTI6MTYgw5ZTOzI5MDE="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDU7MTE6MTg6MTQgw5ZTOzE7MzAxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ptb, i, toplam, sayi" type="Real" array="False" size=""/>
+            <assign variable="toplam" expression="0"/>
+            <assign variable="ptb" expression="0"/>
+            <output expression="&quot;Pozitif Tam B&#246;lenlerini Hesaplamak &#304;stedi&#287;iniz Say&#305;y&#305; Giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <for variable="i" start="1" end="sayi" direction="inc" step="1">
+                <if expression="sayi % i == 0">
+                    <then>
+                        <output expression="&quot;B&#246;len Sayilardan Biri: &quot; &amp; i" newline="True"/>
+                        <assign variable="ptb" expression="ptb + i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Girdi&#287;iniz Say&#305;n&#305;n Pozitif Tam B&#246;len Say&#305;lar&#305; Toplam&#305;: &quot; &amp; ptb" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

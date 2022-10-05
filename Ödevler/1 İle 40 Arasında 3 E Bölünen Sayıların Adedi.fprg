@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-04 11:12:21 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDQ7MTE6MDk6MjUgw5ZTOzI5MDY="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDQ7MTE6MTI6MjEgw5ZTOzE7MzAwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, adet" type="Integer" array="False" size=""/>
+            <assign variable="adet" expression="0"/>
+            <for variable="i" start="1" end="40" direction="inc" step="1">
+                <if expression="i % 3 == 0">
+                    <then>
+                        <assign variable="adet" expression="adet + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;1 &#304;le 40 Aras&#305;ndaki 3 E B&#246;l&#252;nen Say&#305;lar&#305;n Adedi: &quot; &amp; adet" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

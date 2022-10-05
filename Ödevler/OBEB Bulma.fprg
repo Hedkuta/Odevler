@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-05 11:42:32 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDU7MTE6MzQ6Mjggw5ZTOzI5MDg="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDU7MTE6NDI6MzIgw5ZTOzE7MzAxMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi1, sayi2, bolen, i, obeb" type="Integer" array="False" size=""/>
+            <assign variable="bolen" expression="2"/>
+            <output expression="&quot;OBEB'&#304;ni Hesaplamak &#304;stedi&#287;iniz Birinci Say&#305;y&#305; Giriniz.&quot;" newline="True"/>
+            <input variable="sayi1"/>
+            <output expression="&quot;OBEB'&#304;ni Hesaplamak &#304;stedi&#287;iniz &#304;kinci Say&#305;y&#305; Giriniz.&quot;" newline="True"/>
+            <input variable="sayi2"/>
+            <assign variable="obeb" expression="1"/>
+            <while expression="sayi1 &gt; 1 &amp;&amp; sayi2 &gt; 1">
+                <if expression="sayi1 % bolen == 0 &amp;&amp; sayi2 % bolen == 0">
+                    <then>
+                        <assign variable="obeb" expression="obeb * bolen"/>
+                        <assign variable="sayi1" expression="sayi1 / bolen"/>
+                        <assign variable="sayi2" expression="sayi2 / bolen"/>
+                    </then>
+                    <else>
+                        <if expression="sayi1 % bolen == 0">
+                            <then>
+                                <assign variable="sayi1" expression="sayi1 / bolen"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="sayi2 % bolen == 0">
+                            <then>
+                                <assign variable="sayi2" expression="sayi2 / bolen"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="sayi1 % bolen &lt;&gt; 0 &amp;&amp; sayi2 % bolen &lt;&gt; 0">
+                            <then>
+                                <assign variable="bolen" expression="bolen + 1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Girdi&#287;iniz Say&#305;lar&#305;n OBEB'i: &quot; &amp; obeb" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-05 11:12:11 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDU7MTA6NDU6MDYgw5ZTOzI5MDU="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDU7MTE6MTI6MTEgw5ZTOzE7MzAwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayilar" type="Integer" array="True" size="11"/>
+            <declare name="toplam, enb, enk, i" type="Integer" array="False" size=""/>
+            <declare name="ortalama, ebekortalama, a" type="Real" array="False" size=""/>
+            <assign variable="toplam" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="i+1 &amp; &quot;. Say&#305;y&#305; Giriniz.&quot;" newline="True"/>
+                <input variable="sayilar[i]"/>
+            </for>
+            <assign variable="enb" expression="sayilar[0]"/>
+            <assign variable="enk" expression="sayilar[0]"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="toplam" expression="toplam + sayilar[i]"/>
+                <if expression="enb &lt; sayilar[i]">
+                    <then>
+                        <assign variable="enb" expression="sayilar[i]"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="enk &gt; sayilar[i]">
+                    <then>
+                        <assign variable="enk" expression="sayilar[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="ortalama" expression="toplam / 10"/>
+            <output expression="&quot;Girdi&#287;iniz Sayilar&#305;n Ortalamas&#305;: &quot; &amp; ortalama" newline="True"/>
+            <assign variable="ebekortalama" expression="( enb + enk )/ 2"/>
+            <output expression="&quot;Girdi&#287;iniz En B&#252;y&#252;k Ve En K&#252;&#231;&#252;k Say&#305;n&#305;n Ortalamas&#305;: &quot; &amp; ebekortalama" newline="True"/>
+            <if expression="ebekortalama &gt; ortalama">
+                <then>
+                    <assign variable="a" expression="ebekortalama - ortalama"/>
+                </then>
+                <else>
+                    <assign variable="a" expression="ortalama - ebekortalama"/>
+                </else>
+            </if>
+            <output expression="&quot;Yukar&#305;daki &#304;ki Ortalaman&#305;n Fark&#305;: &quot; &amp; a" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

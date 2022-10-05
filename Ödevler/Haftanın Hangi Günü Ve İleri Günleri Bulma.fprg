@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-04 11:30:58 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDQ7MTE6MTQ6MDYgw5ZTOzI5MDE="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDQ7MTE6MzA6NTggw5ZTOzE7MzAxNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="gunler" type="String" array="True" size="7"/>
+            <declare name="sonrasi, i, bugunsayi, ilerig&#252;n" type="Integer" array="False" size=""/>
+            <declare name="bugun" type="String" array="False" size=""/>
+            <assign variable="gunler[0]" expression="&quot;Pazartesi&quot;"/>
+            <assign variable="gunler[1]" expression="&quot;Sal&#305;&quot;"/>
+            <assign variable="gunler[2]" expression="&quot;&#199;ar&#351;amba&quot;"/>
+            <assign variable="gunler[3]" expression="&quot;Per&#351;embe&quot;"/>
+            <assign variable="gunler[4]" expression="&quot;Cuma&quot;"/>
+            <assign variable="gunler[5]" expression="&quot;Cumartesi&quot;"/>
+            <assign variable="gunler[6]" expression="&quot;Pazar&quot;"/>
+            <output expression="&quot;Bug&#252;n G&#252;nlerden Ne? &quot;" newline="True"/>
+            <input variable="bugun"/>
+            <for variable="i" start="0" end="6" direction="inc" step="1">
+                <if expression="gunler[i] == bugun">
+                    <then>
+                        <assign variable="bugunsayi" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Ka&#231; G&#252;n Sonraki G&#252;n&#252; Bilmek &#304;stiyorsunuz?&quot;" newline="True"/>
+            <input variable="sonrasi"/>
+            <assign variable="ilerig&#252;n" expression="bugunsayi + sonrasi"/>
+            <assign variable="ilerig&#252;n" expression="ilerig&#252;n % 7"/>
+            <output expression="gunler[ilerig&#252;n]" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

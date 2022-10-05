@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-04 11:47:41 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDQ7MTE6NDA6NDIgw5ZTOzI5MDA="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDQ7MTE6NDc6NDEgw5ZTOzE7MzAxNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tek&#231;arp&#305;m, tektoplam, i, &#231;iftkare, N" type="Integer" array="False" size=""/>
+            <assign variable="tek&#231;arp&#305;m" expression="1"/>
+            <assign variable="tektoplam" expression="0"/>
+            <assign variable="&#231;iftkare" expression="1"/>
+            <output expression="&quot;L&#252;tfen 1'Den ... Say&#305;s&#305;na Kadar Yapmak &#304;stedi&#287;iniz Matematiksel Hesaplamalar&#305; Giriniz.&quot;" newline="True"/>
+            <input variable="N"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <if expression="i % 2 == 0">
+                    <then>
+                        <assign variable="&#231;iftkare" expression="&#231;iftkare + ( i * i )"/>
+                    </then>
+                    <else>
+                        <assign variable="tektoplam" expression="tektoplam + i"/>
+                        <assign variable="tek&#231;arp&#305;m" expression="tek&#231;arp&#305;m * i"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Girdi&#287;iniz N Say&#305;s&#305;n&#305;n Tek Toplamlar&#305;: &quot; &amp; tektoplam" newline="True"/>
+            <output expression="&quot;Girdi&#287;iniz N Say&#305;s&#305;n&#305;n Tek &#199;arp&#305;mlar&#305;: &quot; &amp; tek&#231;arp&#305;m" newline="True"/>
+            <output expression="&quot;Girdi&#287;iniz N Say&#305;s&#305;n&#305;n &#199;ift Kareleri: &quot; &amp; &#231;iftkare" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

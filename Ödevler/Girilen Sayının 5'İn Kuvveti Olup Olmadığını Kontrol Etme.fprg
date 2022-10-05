@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-04 10:57:00 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDQ7MTA6NDg6MDMgw5ZTOzI5MDQ="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDQ7MTA6NTc6MDAgw5ZTOzE7MzAwOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen 5'in Kuvveti Olup Olmad&#305;&#287;&#305;n&#305; Kontrol Etmek &#304;stedi&#287;iniz Say&#305;y&#305; Giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <while expression="sayi &gt; 1">
+                <if expression="sayi % 5 == 0">
+                    <then>
+                        <assign variable="sayi" expression="sayi / 5"/>
+                    </then>
+                    <else>
+                        <assign variable="sayi" expression="0"/>
+                    </else>
+                </if>
+            </while>
+            <if expression="sayi == 1">
+                <then>
+                    <output expression="&quot;Girdi&#287;iniz Sayi 5'&#304;n Kuvveti.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Girdi&#287;iniz Sayi 5'&#304;n Kuvveti De&#287;il.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
